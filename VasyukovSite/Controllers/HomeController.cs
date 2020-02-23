@@ -10,20 +10,34 @@ namespace VasyukovSite.Controllers
 {
     public class HomeController : Controller
     {
+        [Route("Index")]
+        //[Route("")]
+        [Route("~/Home")]
+        [Route("/")]
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult Privacy()
+        [Route("[action]/{name?}")]
+        public ViewResult Project(string name)
         {
-            return View();
+            if (string.IsNullOrEmpty(name))
+            name = "website";
+
+            string model = name;
+            return View("Project",model);
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+        //public IActionResult Privacy()
+        //{
+        //    return View();
+        //}
+
+        //[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        //public IActionResult Error()
+        //{
+        //    return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        //}
     }
 }
