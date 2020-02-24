@@ -1,7 +1,64 @@
 ﻿@model string
 @{
-    ViewData["Title"] = "Project";
+    ViewData["Title"] = "Projects";
 }
 @*<h1>@ViewData["Title"]</h1>*@
-<p>@Model</p>
-<p>Use this page to detail your site's privacy policy.</p>
+@*<p>@Model</p>*@
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Choose project
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Project">This Personal website (ASP NET Core 2.2 MVC)</a>
+        <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Project" asp-route-name="bookmefood">Book Me Food (WPF, WCF)</a>
+        <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Project" asp-route-name="barsik">BarsIK (Winforms, FTP, SQL)</a>
+        <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Project" asp-route-name="barsinfo">BARSINFO (Winforms, SQL)</a>
+        @*<a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>*@
+    </div>
+</div>
+@{ switch (Model)
+    {
+        case "bookmefood":
+            <p class="h4">"Book Me Food" program</p>
+            <a href="https://yadi.sk/d/e-RL4QZ5pgsJGg">DOWNLOAD</a>
+            <p>
+                The program is build using WPF with the Material Design flavor. It's purpose is to provide connections between colleagues who are trying to order some food in office. Through using duplex WCF building, "dualHttpBinding" it is creating counting server, where participants picking their desirable items in food delivery store, picking discount they want to apply and when they finished, this program calculating their order making ordering process a lot easier. Right now this program works with lan network only. Handy search feature can look for servers of this program within your local net. In future I'll develop remote API for this program. So it will decrease admin prerequisites off participant who lead his server.
+            </p>
+            <img src="~/img/Manual-En.png" class="img-fluid" alt="Responsive image">
+            <p>Tutorial Screen in English.</p>
+            <img src="~/img/bookmefood_1.PNG" class="img-fluid" alt="Responsive image">
+            <p>Ordering screen.</p>
+            <img src="~/img/bookmefood_2.PNG" class="img-fluid" alt="Responsive image">
+            <p>Screen with finished calculations.</p>
+            break;
+        case "barsik":
+            <p class="h4">"BarsIK (info keeper)" program</p>
+            <a href="https://yadi.sk/d/e-RL4QZ5pgsJGg">DOWNLOAD</a>
+            <p>
+                The program is build using  Winforms. While you are using products of Bars-It company you can't easily check are version of your programs is up to date. This program is doing this for your. It searches for Bars modules throughout most usual places it could be installed, using windows registry and program-data folder. After this program have got your modules versions it checks for newer version on Bars-IT FTP. If they doesn't match, this program will show it to you. It also can use your office proxy to proper connection.
+
+            </p>
+            <img src="~/img/barsik1.PNG" class="img-fluid" alt="Responsive image">
+            break;
+        case "barsinfo":
+            <p class="h4">"BarsInfo" program</p>
+            <a href="https://yadi.sk/d/Pc5lXLBliv6oeg">DOWNLOAD</a>
+            <p>
+                The program is build using  Winforms. It was used by support engineers of Bars-It company to gather detail information about client's modules of Bars program complex.
+
+            </p>
+            <img src="~/img/barsInfo.PNG" class="img-fluid" alt="Responsive image">
+            break;
+
+        default:
+            <p class="h4">Website</p>
+            <p>This website was made on Asp.Net technology using dotnet core framework and MVC pattern. It's purpose to show my skills in website building and program organizing. It was placed on "Somee" the free hosting server.</p>
+            <img src="~/img/website.PNG" class="img-fluid" width="50%" alt="Responsive image">
+            break;
+    }
+}
+
+
+<p>@*Use this page to detail your site's privacy policy.*@</p>

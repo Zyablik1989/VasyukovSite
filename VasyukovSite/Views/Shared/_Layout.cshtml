@@ -40,13 +40,18 @@
                         My Projects
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">This Personal website (ASP NET Core 2.2 MVC)</a>
+                        <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Project">This Personal website (ASP NET Core 2.2 MVC)</a>
+                        @*<a asp-controller="Home" asp-action="GetPerson" asp-route-id="5">Item5</a>
+        <a class="dropdown-item" href="#">This Personal website (ASP NET Core 2.2 MVC)</a>*@
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Book Me Food (WPF, WCF)</a>
+                        @*<a class="dropdown-item" href="#">Book Me Food (WPF, WCF)</a>*@
+                        <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Project" asp-route-name="bookmefood">Book Me Food (WPF, WCF)</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">BarsIK (Winforms, FTP, SQL)</a>
+                        @*<a class="dropdown-item" href="#"</a>*@
+                        <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Project" asp-route-name="barsik">BarsIK (Winforms, FTP, SQL)</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">BARSINFO (Winforms, SQL)</a>
+                        <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Project" asp-route-name="barsinfo">BARSINFO (Winforms, SQL)</a>
+                        @*<a class="dropdown-item" href="#">BARSINFO (Winforms, SQL)</a>*@
 
                     </div>
                 </li>
@@ -54,10 +59,11 @@
                         <a class="nav-link disabled" href="#">Disabled</a>
                     </li>*@
             </ul>
-            @*<form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>*@
+            <form class="form-inline my-2 my-lg-0">
+                <a href="mailto:VasyukovAlexey@yandex.ru">VasyukovAlexey@yandex.ru</a>
+                @*<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>*@
+            </form>
         </div>
     </nav>
 
@@ -70,7 +76,7 @@
 
 <footer class="border-top footer text-muted">
     <div class="container">
-        &copy; 2020 - VasyukovSite
+        &copy; 2020 - Vasyukov Alexey
         @*- <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>*@
     </div>
 </footer>
