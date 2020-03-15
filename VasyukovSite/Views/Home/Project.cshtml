@@ -9,6 +9,7 @@
         Choose project
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Project" asp-route-name="clinic">Clinic Management (WPF, EF6)</a>
         <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Project">This Personal website (ASP NET Core 2.2 MVC)</a>
         <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Project" asp-route-name="bookmefood">Book Me Food (WPF, WCF)</a>
         <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Project" asp-route-name="barsik">BarsIK (Winforms, FTP, SQL)</a>
@@ -50,6 +51,16 @@
 
             </p>
             <img src="~/img/barsInfo.PNG" class="img-fluid" alt="Responsive image">
+            break;
+
+        case "clinic":
+            <p class="h4">"Clinic Management" test program</p>
+            <a href="https://yadi.sk/d/giE3aHT4GA1MdQ">DOWNLOAD</a>
+            <p>
+                The program is build using WPF. It was designed and developed as test project for one of companies. The task was to build clinic management system, which can add/edit/delete Patients notes and Visits associated with them. Entity Framework 6 and CodeFirst paradigm ought to be used. So they are.
+
+            </p>
+            <img src="~/img/clinic.PNG" class="img-fluid" alt="Responsive image">
             break;
 
         default:
