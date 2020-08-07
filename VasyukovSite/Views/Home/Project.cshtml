@@ -9,14 +9,15 @@
         Choose project
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Project" asp-route-name="regionalcodes">Regional Codes (Xamarin)</a>
         <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Project" asp-route-name="clinic">Clinic Management (WPF, EF6)</a>
-        <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Project">This Personal website (ASP NET Core 2.2 MVC)</a>
+        <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Project" asp-route-name="website">This Personal website (ASP NET Core 2.2 MVC)</a>
         <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Project" asp-route-name="bookmefood">Book Me Food (WPF, WCF)</a>
         <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Project" asp-route-name="barsik">BarsIK (Winforms, FTP, SQL)</a>
         <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Project" asp-route-name="barsinfo">BARSINFO (Winforms, SQL)</a>
         @*<a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>*@
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>*@
     </div>
 </div>
 @{ switch (Model)
@@ -62,11 +63,23 @@
             </p>
             <img src="~/img/clinic.PNG" class="img-fluid" alt="Responsive image">
             break;
-
-        default:
-            <p class="h4">Website</p>
+        case "website":
+            <p class="h4">Personal Website</p>
             <p>This website was made on Asp.Net technology using dotnet core framework and MVC pattern. It's purpose to show my skills in website building and program organizing. It was placed on "Somee" the free hosting server.</p>
             <img src="~/img/website.PNG" class="img-fluid" width="50%" alt="Responsive image">
+            break;
+        case "regionalcodes":
+            <p class="h4">Regional Codes</p>
+            <a href="https://play.google.com/store/apps/details?id=com.workz.regionalcodes">DOWNLOAD</a>
+            <p>This Mobile App was build for practicing purposes. I was wondering am I able for to learn in 2 days basics of Xamarin (gladly I am already know how WPF's XAML-layout works, which Xamarin uses too) and develop a small but practical mobile app. One weekend spent I've developed the "Regional Codes" | "Коды регионов" (It means russian car plate regional codes only) application and after 4 days of moderating Google published it in their Play Market. You can freely download this Russian-language app, check the region of the code you're interested in, and also pass a little quiz over regional codes base.</p>
+            <img src="~/img/RegionalCodesPromo.png" class="img-fluid" width="50%" alt="Responsive image">
+            break;
+
+        default:
+            <p class="h4">Regional Codes</p>
+            <a href="https://play.google.com/store/apps/details?id=com.workz.regionalcodes">DOWNLOAD</a>
+            <p>This Mobile App was build for practicing purposes. I was wondering am I able for to learn in 2 days basics of Xamarin (gladly I am already know how WPF's XAML-layout works, which Xamarin uses too) and develop a small but practical mobile app. One weekend spent I've developed the "Regional Codes" | "Коды регионов" (It means russian car plate regional codes only) application and after 4 days of moderating Google published it in their Play Market. You can freely download this Russian-language app, check the region of the code you're interested in, and also pass a little quiz over regional codes base.</p>
+            <img src="~/img/RegionalCodesPromo.png" class="img-fluid" width="50%" alt="Responsive image">
             break;
     }
 }

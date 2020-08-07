@@ -23,7 +23,7 @@ namespace VasyukovSite.Controllers
         public ViewResult Project(string name)
         {
             if (string.IsNullOrEmpty(name))
-            name = "website";
+            name = "regionalcodes";
 
             string model = name;
             return View("Project",model);
